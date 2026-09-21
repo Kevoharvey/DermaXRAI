@@ -14,13 +14,13 @@ The project combines:
 * 🎨 **UI/UX Design** using Google Stitch and Figma
 * 📊 **Machine Learning Evaluation** to measure model performance
 
-> ⚠️ **Disclaimer:** SkinAI is an educational/research project and is not intended to provide a definitive medical diagnosis. Model predictions should not replace professional medical advice.
+> ⚠️ **Disclaimer:** DermaXRAI is an educational/research project and is not intended to provide a definitive medical diagnosis. Model predictions should not replace professional medical advice.
 
 ---
 
 ## 🎯 Project Goals
 
-The main goals of SkinAI are to:
+The main goals of DermaXRAI are to:
 
 * 🧠 Develop a Deep Learning model capable of classifying selected skin conditions.
 * 📸 Allow users to provide skin images through the Android application.
