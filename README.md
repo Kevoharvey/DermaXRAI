@@ -1,5 +1,5 @@
-# 🧴 DermaXRAI
-
+<img width="1920" height="1080" alt="Copy of Final " src="https://github.com/user-attachments/assets/f681d41e-8f8a-4dae-bb6b-7bcef538fba4" />
+---
 > An AI-powered skincare application that uses Deep Learning to analyze skin images and identify potential skin conditions.
 
 ## 📌 About the Project
