@@ -1,4 +1,5 @@
-<img width="1920" height="1080" alt="DermaXR{AI}" src="https://github.com/user-attachments/assets/f26321fd-ee2f-4476-a8e2-4e687c561150" />
+<img width="1920" height="1080" alt="DermaXR{AI}" src="https://github.com/user-attachments/assets/1f04c396-77d8-453b-b6f1-a2dd6d65a444" />
+
 Meet DermaXR{AI}
 ---
 
