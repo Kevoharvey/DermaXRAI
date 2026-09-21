@@ -1,10 +1,10 @@
-# 🧴 SkinAI
+# 🧴 DermaXAI
 
 > An AI-powered skincare application that uses Deep Learning to analyze skin images and identify potential skin conditions.
 
 ## 📌 About the Project
 
-**SkinAI** is an Android application project focused on analyzing skin images and providing users with information about potential skin conditions.
+**DermaXAI** is an Android application project focused on analyzing skin images and providing users with information about potential skin conditions.
 
 The project combines:
 
