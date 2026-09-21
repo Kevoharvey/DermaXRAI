@@ -1,4 +1,4 @@
-<img width="1920" height="1080" alt="DermaXR{AI}" src="https://github.com/user-attachments/assets/1f04c396-77d8-453b-b6f1-a2dd6d65a444"/>
+<img width="1920" height="1080" alt="Copy of Final -3" src="https://github.com/user-attachments/assets/faab7adb-c5c9-4f07-9aaf-e69c022f69b9" />
 
 The new step for Image Diagnosing Models.
 ---
