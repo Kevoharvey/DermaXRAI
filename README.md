@@ -1,10 +1,9 @@
-<img width="1920" height="1080" alt="Copy of Final -3" src="https://github.com/user-attachments/assets/faab7adb-c5c9-4f07-9aaf-e69c022f69b9" />
+<img width="1920" height="1080" alt="Derma-X-R{AI}" src="https://github.com/user-attachments/assets/cf3f114c-46cc-409d-bc40-99a6a368d004" />
 
 The new step for Image Diagnosing Models.
 ---
 
 An AI-powered skincare application that uses Deep Learning to analyze skin images and identify potential skin conditions.
-
 ## 📌 About the Project
 
 **DermaXR{AI}** is an Android application project focused on analyzing skin images and providing users with information about potential skin conditions.
