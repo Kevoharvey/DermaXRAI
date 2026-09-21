@@ -56,6 +56,7 @@ The project will be developed through several stages:
 ```
 
 ---
+
 ## 🧠 Deep Learning
 
 The Deep Learning component will be responsible for analyzing skin images and predicting the supported skin-condition classes.
@@ -80,6 +81,7 @@ The final supported conditions will depend on the quality, availability, and lic
 ## 📊 Dataset
 
 The project will use publicly available and appropriately licensed dermatology datasets where possible.
+
 ---
 
 ## 📱 Android Application
@@ -117,3 +119,185 @@ SkinAI/
 ```
 
 ---
+
+## 📜 Development Rules
+
+To keep the project organized and prevent conflicts between team members, everyone must follow these rules.
+
+### 🌿 1. Always Create a New Branch
+
+**Never make changes directly on the `main` branch.**
+
+Whenever you want to add a new feature, fix a bug, modify the model, update the UI, or make any other change:
+
+```bash
+git checkout main
+git pull origin main
+git checkout -b feature/your-feature-name
+```
+
+Examples:
+
+```text
+feature/android-layout
+feature/dataset-preprocessing
+feature/model-training
+feature/camera-integration
+fix/image-validation
+docs/project-documentation
+```
+
+### 🔄 2. One Task = One Branch
+
+Each GitHub Issue should have its own branch whenever practical.
+
+```text
+Issue #5
+   ↓
+feature/model-training
+   ↓
+Pull Request
+   ↓
+Review
+   ↓
+Merge
+```
+
+Do not combine unrelated tasks into the same branch.
+
+### 🚫 3. Do Not Push Directly to `main`
+
+All changes must go through a **Pull Request**.
+
+```text
+Your Branch
+     ↓
+Pull Request
+     ↓
+Code Review
+     ↓
+Approved ✅
+     ↓
+main
+```
+
+### 📝 4. Keep Commits Clear
+
+Write meaningful commit messages that explain what changed.
+
+Good:
+
+```text
+feat: add skin image preprocessing
+feat: implement camera image selection
+fix: handle invalid image input
+docs: update dataset documentation
+```
+
+Avoid:
+
+```text
+update
+changes
+fix
+final
+test
+asdf
+```
+
+### 🔗 5. Reference the GitHub Issue
+
+Pull Requests and relevant commits should reference the GitHub Issue they are addressing.
+
+Example:
+
+```text
+Closes #5
+```
+
+This allows GitHub to automatically associate the work with the corresponding issue.
+
+### 👀 6. Review Before Merging
+
+Before merging a Pull Request:
+
+* 🧪 Test the changes.
+* 🔍 Review the code.
+* 📖 Check documentation.
+* 🔗 Make sure the related issue is addressed.
+* ⚠️ Check that existing functionality has not been broken.
+
+### 🧹 7. Keep the Repository Clean
+
+Do not commit:
+
+* ❌ API keys
+* ❌ Passwords
+* ❌ Personal/private information
+* ❌ Large temporary files
+* ❌ Unnecessary generated files
+* ❌ Local development configuration
+
+Use `.gitignore` appropriately.
+
+### 🤝 8. Keep Changes Focused
+
+A Pull Request should focus on a specific task or issue.
+
+Avoid mixing unrelated changes such as:
+
+```text
+❌ Model training
+❌ UI redesign
+❌ Documentation changes
+❌ Random bug fixes
+```
+
+into one Pull Request unless they are directly related.
+
+### 📚 9. Update Documentation
+
+If a change affects how the project works, update the relevant documentation.
+
+Documentation should be written in **English** and should be clear enough for another team member to understand the implementation.
+
+### 🔀 10. Keep Your Branch Updated
+
+Before creating or merging a Pull Request, make sure your branch is synchronized with the latest `main` branch.
+
+```bash
+git checkout main
+git pull origin main
+git checkout your-branch
+git merge main
+```
+
+Resolve any conflicts before requesting the final review.
+
+---
+
+## 🔀 Git Workflow
+
+The standard workflow for every task is:
+
+```text
+📋 GitHub Issue
+      ↓
+🌿 Create Branch
+      ↓
+💻 Implement Changes
+      ↓
+🧪 Test
+      ↓
+📤 Push Branch
+      ↓
+🔀 Create Pull Request
+      ↓
+👀 Code Review
+      ↓
+✅ Merge
+      ↓
+🧹 Delete Branch
+```
+
+**Main branch = stable project code.** 🛡️
