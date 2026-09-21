@@ -1,6 +1,6 @@
 <img width="1920" height="1080" alt="DermaXR{AI}" src="https://github.com/user-attachments/assets/1f04c396-77d8-453b-b6f1-a2dd6d65a444" />
 
-Meet DermaXR{AI}
+The new step for Image Diagnosing Models.
 ---
 
 An AI-powered skincare application that uses Deep Learning to analyze skin images and identify potential skin conditions.
