@@ -1,10 +1,10 @@
-# 🧴 DermaXAI
+# 🧴 DermaXRAI
 
 > An AI-powered skincare application that uses Deep Learning to analyze skin images and identify potential skin conditions.
 
 ## 📌 About the Project
 
-**DermaXAI** is an Android application project focused on analyzing skin images and providing users with information about potential skin conditions.
+**DermaXRAI** is an Android application project focused on analyzing skin images and providing users with information about potential skin conditions.
 
 The project combines:
 
