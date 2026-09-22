@@ -3,18 +3,17 @@
 # Derma-X-R{AI}
 
 > The new step for Image Diagnosing Models.
-<img src="https://custom-icon-badges.demolab.com/badge/Status-In%20Progress-yellow?logoColor=fff" alt="Status: In Progress">
 <p align="center">
-  <img src="https://custom-icon-badges.demolab.com/badge/Kotlin-7F52FF?logo=kotlin&logoColor=fff" alt="Kotlin" height="40">
-  <img src="https://custom-icon-badges.demolab.com/badge/Android-3DDC84?logo=android&logoColor=fff" alt="Android" height="40">
-  <img src="https://custom-icon-badges.demolab.com/badge/PyTorch-EE4C2C?logo=pytorch&logoColor=fff" alt="PyTorch" height="40">
-  <img src="https://custom-icon-badges.demolab.com/badge/Scikit--learn-F7931E?logo=scikit-learn&logoColor=fff" alt="Scikit-learn" height="40">
-  <img src="https://custom-icon-badges.demolab.com/badge/NumPy-013243?logo=numpy&logoColor=fff" alt="NumPy" height="40">
-  <img src="https://custom-icon-badges.demolab.com/badge/Pandas-150458?logo=pandas&logoColor=fff" alt="Pandas" height="40">
-  <img src="https://custom-icon-badges.demolab.com/badge/Matplotlib-71D291?logo=matplotlib&logoColor=fff" alt="Matplotlib" height="40">
-  <img src="https://custom-icon-badges.demolab.com/badge/Seaborn-4C72B0?logo=seaborn&logoColor=fff" alt="Seaborn" height="40">
-  <img src="https://custom-icon-badges.demolab.com/badge/OpenCV-5C3EE8?logo=opencv&logoColor=fff" alt="OpenCV" height="40">
-  <img src="https://custom-icon-badges.demolab.com/badge/Pillow-3776AB?logo=pillow&logoColor=fff" alt="Pillow" height="40">
+  <img src="https://custom-icon-badges.demolab.com/badge/Kotlin-7F52FF?logo=kotlin&logoColor=fff" alt="Kotlin" height="50">
+  <img src="https://custom-icon-badges.demolab.com/badge/Android-3DDC84?logo=android&logoColor=fff" alt="Android" height="50">
+  <img src="https://custom-icon-badges.demolab.com/badge/PyTorch-EE4C2C?logo=pytorch&logoColor=fff" alt="PyTorch" height="50">
+  <img src="https://custom-icon-badges.demolab.com/badge/Scikit--learn-F7931E?logo=scikit-learn&logoColor=fff" alt="Scikit-learn" height="50">
+  <img src="https://custom-icon-badges.demolab.com/badge/NumPy-013243?logo=numpy&logoColor=fff" alt="NumPy" height="50">
+  <img src="https://custom-icon-badges.demolab.com/badge/Pandas-150458?logo=pandas&logoColor=fff" alt="Pandas" height="50">
+  <img src="https://custom-icon-badges.demolab.com/badge/Matplotlib-71D291?logo=matplotlib&logoColor=fff" alt="Matplotlib" height="50">
+  <img src="https://custom-icon-badges.demolab.com/badge/Seaborn-4C72B0?logo=seaborn&logoColor=fff" alt="Seaborn" height="50">
+  <img src="https://custom-icon-badges.demolab.com/badge/OpenCV-5C3EE8?logo=opencv&logoColor=fff" alt="OpenCV" height="50">
+  <img src="https://custom-icon-badges.demolab.com/badge/Pillow-3776AB?logo=pillow&logoColor=fff" alt="Pillow" height="50">
 </p>
 
 An AI-powered skincare application that uses Deep Learning to analyze skin images and identify potential skin conditions.
