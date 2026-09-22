@@ -4,15 +4,14 @@
 
 > The new step for Image Diagnosing Models.
 <p align="center">
-    [![Kotlin](https://custom-icon-badges.demolab.com/badge/Kotlin-7F52FF?logo=kotlin&logoColor=fff)](#)
-    [![NumPy](https://custom-icon-badges.demolab.com/badge/NumPy-013243?logo=numpy&logoColor=fff)](#)
-    [![Pandas](https://custom-icon-badges.demolab.com/badge/Pandas-150458?logo=pandas&logoColor=fff)](#)
-    [![Matplotlib](https://custom-icon-badges.demolab.com/badge/Matplotlib-71D291?logo=matplotlib&logoColor=fff)](#)
-    [![Seaborn](https://custom-icon-badges.demolab.com/badge/Seaborn-4C72B0?logo=seaborn&logoColor=fff)](#)
-    [![Pillow](https://custom-icon-badges.demolab.com/badge/Pillow-3776AB?logo=pillow&logoColor=fff)](#)
-    [![PyTorch](https://custom-icon-badges.demolab.com/badge/PyTorch-EE4C2C?logo=pytorch&logoColor=fff)](#)
-    [![Android](https://custom-icon-badges.demolab.com/badge/Android-3DDC84?logo=android&logoColor=fff)](#)
-    [![OpenCV](https://custom-icon-badges.demolab.com/badge/OpenCV-5C3EE8?logo=opencv&logoColor=fff)](#)
+  <img src="https://custom-icon-badges.demolab.com/badge/Status-In%20Progress-yellow?logoColor=fff" alt="Status: In Progress">
+  <img src="https://custom-icon-badges.demolab.com/badge/Kotlin-7F52FF?logo=kotlin&logoColor=fff" alt="Kotlin">
+  <img src="https://custom-icon-badges.demolab.com/badge/PyTorch-EE4C2C?logo=pytorch&logoColor=fff" alt="PyTorch">
+  <img src="https://custom-icon-badges.demolab.com/badge/NumPy-013243?logo=numpy&logoColor=fff" alt="NumPy">
+  <img src="https://custom-icon-badges.demolab.com/badge/Pandas-150458?logo=pandas&logoColor=fff" alt="Pandas">
+  <img src="https://custom-icon-badges.demolab.com/badge/Matplotlib-71D291?logo=matplotlib&logoColor=fff" alt="Matplotlib">
+  <img src="https://custom-icon-badges.demolab.com/badge/Seaborn-4C72B0?logo=seaborn&logoColor=fff" alt="Seaborn">
+  <img src="https://custom-icon-badges.demolab.com/badge/Pillow-3776AB?logo=pillow&logoColor=fff" alt="Pillow">
 </p>
 
 An AI-powered skincare application that uses Deep Learning to analyze skin images and identify potential skin conditions.
