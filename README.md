@@ -1,6 +1,6 @@
 <img width="1920" height="1080" alt="Derma-X-R{AI}" src="https://github.com/user-attachments/assets/d84b52d2-d3ba-4569-837f-0fe47adb7a0a" />
 
-# DermaXR{AI}
+# Derma-X-R{AI}
 
 > The new step for Image Diagnosing Models.
 <img src="https://custom-icon-badges.demolab.com/badge/Status-In%20Progress-yellow?logoColor=fff" alt="Status: In Progress" height="40">
@@ -23,7 +23,7 @@ An AI-powered skincare application that uses Deep Learning to analyze skin image
 
 ## 📌 About the Project
 
-**DermaXR{AI}** is an Android application project focused on analyzing skin images and providing users with information about potential skin conditions.
+**Derma-X-R{AI}** is an Android application project focused on analyzing skin images and providing users with information about potential skin conditions.
 
 The project combines:
 
@@ -33,13 +33,13 @@ The project combines:
 * 🎨 **UI/UX Design** using Google Stitch and Figma
 * 📊 **Machine Learning Evaluation** to measure model performance
 
-> ⚠️ **Disclaimer:** DermaXR{AI} is an educational/research project and is not intended to provide a definitive medical diagnosis. Model predictions should not replace professional medical advice.
+> ⚠️ **Disclaimer:** Derma-X-R{AI} is an educational/research project and is not intended to provide a definitive medical diagnosis. Model predictions should not replace professional medical advice.
 
 ---
 
 ## 🎯 Project Goals
 
-The main goals of DermaXR{AI} are to:
+The main goals of Derma-X-R{AI} are to:
 
 * 🧠 Develop a Deep Learning model capable of classifying selected skin conditions.
 * 📸 Allow users to provide skin images through the Android application.
@@ -130,7 +130,7 @@ The Android development will include:
 The project structure will evolve as development progresses.
 
 ```text
-DermaXR{AI}/
+Derma-X-R{AI}/
 │
 ├── 📱 android/
 ├── 🧠 model/
