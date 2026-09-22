@@ -3,8 +3,8 @@
 # DermaXR{AI}
 
 > The new step for Image Diagnosing Models.
+<img src="https://custom-icon-badges.demolab.com/badge/Status-In%20Progress-yellow?logoColor=fff" alt="Status: In Progress" height="40">
 <p align="center">
-  <img src="https://custom-icon-badges.demolab.com/badge/Status-In%20Progress-yellow?logoColor=fff" alt="Status: In Progress" height="40">
   <img src="https://custom-icon-badges.demolab.com/badge/Kotlin-7F52FF?logo=kotlin&logoColor=fff" alt="Kotlin" height="40">
   <img src="https://custom-icon-badges.demolab.com/badge/Android-3DDC84?logo=android&logoColor=fff" alt="Android" height="40">
   <img src="https://custom-icon-badges.demolab.com/badge/PyTorch-EE4C2C?logo=pytorch&logoColor=fff" alt="PyTorch" height="40">
