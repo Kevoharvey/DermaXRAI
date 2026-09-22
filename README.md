@@ -5,8 +5,8 @@
 > The new step for Image Diagnosing Models.
 <p align="center">
   <img src="https://custom-icon-badges.demolab.com/badge/Status-In%20Progress-yellow?logoColor=fff" alt="Status: In Progress">
-  <img src="https://custom-icon-badges.demolab.com/badge/Kotlin-7F52FF?logo=kotlin&logoColor=fff" alt="Kotlin">
   <img src="https://custom-icon-badges.demolab.com/badge/PyTorch-EE4C2C?logo=pytorch&logoColor=fff" alt="PyTorch">
+  <img src="https://custom-icon-badges.demolab.com/badge/Kotlin-7F52FF?logo=kotlin&logoColor=fff" alt="Kotlin">
   <img src="https://custom-icon-badges.demolab.com/badge/NumPy-013243?logo=numpy&logoColor=fff" alt="NumPy">
   <img src="https://custom-icon-badges.demolab.com/badge/Pandas-150458?logo=pandas&logoColor=fff" alt="Pandas">
   <img src="https://custom-icon-badges.demolab.com/badge/Matplotlib-71D291?logo=matplotlib&logoColor=fff" alt="Matplotlib">
