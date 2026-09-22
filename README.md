@@ -3,20 +3,15 @@
 # DermaXR{AI}
 
 > The new step for Image Diagnosing Models.
-<p align="center">
-</p>
-<p align="center">
-  <img src="https://img.shields.io/badge/Status-In%20Progress-yellow" alt="Status: In Progress" />
-  <img src="https://img.shields.io/badge/Python-3.14-3776AB?logo=python&logoColor=white" alt="Python" />
-  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?logo=pytorch&logoColor=white" alt="PyTorch" />
-  <img src="https://img.shields.io/badge/OpenCV-5C3EE8?logo=opencv&logoColor=white" alt="OpenCV" />  
-  <img src="https://img.shields.io/badge/NumPy-013243?logo=numpy&logoColor=white" alt="NumPy" />
-  <img src="https://img.shields.io/badge/Pandas-150458?logo=pandas&logoColor=white" alt="Pandas" />
-  <img src="https://img.shields.io/badge/Kotlin-7F52FF?logo=kotlin&logoColor=white" alt="Kotlin" />
-  <img src="https://img.shields.io/badge/Matplotlib-11557C?logo=matplotlib&logoColor=white" alt="Matplotlib" />
-  <img src="https://img.shields.io/badge/Seaborn-4C72B0?logo=seaborn&logoColor=white" alt="Seaborn" />
-  <img src="https://img.shields.io/badge/Pillow-3776AB?logo=pillow&logoColor=white" alt="Pillow" />
-</p>
+[![Kotlin](https://custom-icon-badges.demolab.com/badge/Kotlin-7F52FF?logo=kotlin&logoColor=fff)](#)
+[![NumPy](https://custom-icon-badges.demolab.com/badge/NumPy-013243?logo=numpy&logoColor=fff)](#)
+[![Pandas](https://custom-icon-badges.demolab.com/badge/Pandas-150458?logo=pandas&logoColor=fff)](#)
+[![Matplotlib](https://custom-icon-badges.demolab.com/badge/Matplotlib-71D291?logo=matplotlib&logoColor=fff)](#)
+[![Seaborn](https://custom-icon-badges.demolab.com/badge/Seaborn-4C72B0?logo=seaborn&logoColor=fff)](#)
+[![Pillow](https://custom-icon-badges.demolab.com/badge/Pillow-3776AB?logo=pillow&logoColor=fff)](#)
+[![PyTorch](https://custom-icon-badges.demolab.com/badge/PyTorch-EE4C2C?logo=pytorch&logoColor=fff)](#)
+[![Android](https://custom-icon-badges.demolab.com/badge/Android-3DDC84?logo=android&logoColor=fff)](#)
+[![OpenCV](https://custom-icon-badges.demolab.com/badge/OpenCV-5C3EE8?logo=opencv&logoColor=fff)](#)
 
 An AI-powered skincare application that uses Deep Learning to analyze skin images and identify potential skin conditions.
 
