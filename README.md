@@ -13,6 +13,7 @@
     [![PyTorch](https://custom-icon-badges.demolab.com/badge/PyTorch-EE4C2C?logo=pytorch&logoColor=fff)](#)
     [![Android](https://custom-icon-badges.demolab.com/badge/Android-3DDC84?logo=android&logoColor=fff)](#)
     [![OpenCV](https://custom-icon-badges.demolab.com/badge/OpenCV-5C3EE8?logo=opencv&logoColor=fff)](#)
+</p>
 
 An AI-powered skincare application that uses Deep Learning to analyze skin images and identify potential skin conditions.
 
