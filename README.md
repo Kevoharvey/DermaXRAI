@@ -14,8 +14,8 @@
   <img src="https://img.shields.io/badge/Pandas-150458?logo=pandas&logoColor=white" alt="Pandas" />
   <img src="https://img.shields.io/badge/Kotlin-7F52FF?logo=kotlin&logoColor=white" alt="Kotlin" />
   <img src="https://img.shields.io/badge/Matplotlib-11557C?logo=matplotlib&logoColor=white" alt="Matplotlib" />
-  <img src="https://img.shields.io/badge/Seaborn-4C72B0?logo=python&logoColor=white" alt="Seaborn" />
-  <img src="https://img.shields.io/badge/Pillow-3776AB?logo=python&logoColor=white" alt="Pillow" />
+  <img src="https://img.shields.io/badge/Seaborn-4C72B0?logo=seaborn&logoColor=white" alt="Seaborn" />
+  <img src="https://img.shields.io/badge/Pillow-3776AB?logo=pillow&logoColor=white" alt="Pillow" />
 </p>
 
 An AI-powered skincare application that uses Deep Learning to analyze skin images and identify potential skin conditions.
