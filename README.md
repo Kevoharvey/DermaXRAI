@@ -1,13 +1,29 @@
 <img width="1920" height="1080" alt="Derma-X-R{AI}" src="https://github.com/user-attachments/assets/d84b52d2-d3ba-4569-837f-0fe47adb7a0a" />
 
+# Derma-X-R{AI}
 
-The new step for Image Diagnosing Models.
----
+> The new step for Image Diagnosing Models.
+<img src="https://custom-icon-badges.demolab.com/badge/Status-In%20Progress-yellow?logoColor=fff" alt="Status: In Progress">
+<p align="center">
+  <img src="https://custom-icon-badges.demolab.com/badge/Kotlin-7F52FF?logo=kotlin&logoColor=fff" alt="Kotlin" height="50">
+  <img src="https://custom-icon-badges.demolab.com/badge/Android-3DDC84?logo=android&logoColor=fff" alt="Android" height="50">
+  <img src="https://custom-icon-badges.demolab.com/badge/PyTorch-EE4C2C?logo=pytorch&logoColor=fff" alt="PyTorch" height="50">
+  <img src="https://custom-icon-badges.demolab.com/badge/Scikit--learn-F7931E?logo=scikit-learn&logoColor=fff" alt="Scikit-learn" height="50">
+  <img src="https://custom-icon-badges.demolab.com/badge/NumPy-013243?logo=numpy&logoColor=fff" alt="NumPy" height="50">
+  <img src="https://custom-icon-badges.demolab.com/badge/Pandas-150458?logo=pandas&logoColor=fff" alt="Pandas" height="50">
+  <img src="https://custom-icon-badges.demolab.com/badge/Matplotlib-71D291?logo=matplotlib&logoColor=fff" alt="Matplotlib" height="50">
+  <img src="https://custom-icon-badges.demolab.com/badge/Seaborn-4C72B0?logo=seaborn&logoColor=fff" alt="Seaborn" height="50">
+  <img src="https://custom-icon-badges.demolab.com/badge/OpenCV-5C3EE8?logo=opencv&logoColor=fff" alt="OpenCV" height="50">
+  <img src="https://custom-icon-badges.demolab.com/badge/Pillow-3776AB?logo=pillow&logoColor=fff" alt="Pillow" height="50">
+</p>
 
 An AI-powered skincare application that uses Deep Learning to analyze skin images and identify potential skin conditions.
+
+---
+
 ## 📌 About the Project
 
-**DermaXR{AI}** is an Android application project focused on analyzing skin images and providing users with information about potential skin conditions.
+**Derma-X-R{AI}** is an Android application project focused on analyzing skin images and providing users with information about potential skin conditions.
 
 The project combines:
 
@@ -17,13 +33,13 @@ The project combines:
 * 🎨 **UI/UX Design** using Google Stitch and Figma
 * 📊 **Machine Learning Evaluation** to measure model performance
 
-> ⚠️ **Disclaimer:** DermaXR{AI} is an educational/research project and is not intended to provide a definitive medical diagnosis. Model predictions should not replace professional medical advice.
+> ⚠️ **Disclaimer:** Derma-X-R{AI} is an educational/research project and is not intended to provide a definitive medical diagnosis. Model predictions should not replace professional medical advice.
 
 ---
 
 ## 🎯 Project Goals
 
-The main goals of DermaXR{AI} are to:
+The main goals of Derma-X-R{AI} are to:
 
 * 🧠 Develop a Deep Learning model capable of classifying selected skin conditions.
 * 📸 Allow users to provide skin images through the Android application.
@@ -79,11 +95,17 @@ The model-development process will include:
 
 The final supported conditions will depend on the quality, availability, and licensing of suitable datasets.
 
+### 🔥 Framework
+
+The Deep Learning component will be developed using **PyTorch**.
+
 ---
 
 ## 📊 Dataset
 
-The project will use publicly available and appropriately licensed dermatology datasets where possible.
+The project will use **Derma1M** and other publicly available dermatology datasets where possible.
+
+> ⚠️ Dataset usage must follow the applicable licensing and usage terms.
 
 ---
 
@@ -108,17 +130,80 @@ The Android development will include:
 The project structure will evolve as development progresses.
 
 ```text
-DermaXR{AI}/
+Derma-X-R{AI}/
 │
 ├── 📱 android/
-│
 ├── 🧠 model/
-│
 ├── 📊 dataset/
-│
 ├── 📚 docs/
-│
 └── 📄 README.md
+```
+
+---
+
+## ⚙️ Project Setup
+
+### 📥 1. Clone the Repository
+
+Open **VS Code** and:
+
+1. Open **Source Control**.
+2. Select **Clone Repository**.
+3. Enter the GitHub repository URL.
+4. Select the location for the project.
+5. Open the cloned repository in VS Code.
+
+### 🌿 2. Switch to `dev`
+
+The project uses **`dev`** as the main development branch.
+
+In VS Code:
+
+1. Click the branch name in the bottom-left corner.
+2. Select **`dev`**.
+3. Use **Source Control → Pull** to get the latest changes.
+
+> ⚠️ **Do not work directly on `main`.**
+
+### 🐍 3. Set Up Python
+
+In VS Code:
+
+1. Open the Command Palette.
+2. Select **Python: Create Environment**.
+3. Select **Venv**.
+4. Select the project's Python version.
+5. Select `requirements.txt` when prompted.
+
+### 📦 4. Requirements
+
+Create or use `requirements.txt`:
+
+```txt
+numpy
+pandas
+matplotlib
+seaborn
+scikit-learn
+jupyter
+opencv-python
+Pillow
+torch
+torchvision
+torchaudio
+```
+
+### 🧪 5. Verify PyTorch
+
+Run the following in Python:
+
+```python
+import torch
+
+print(f"PyTorch: {torch.__version__}")
+print(
+    f"Device: {'MPS' if torch.backends.mps.is_available() else 'CUDA' if torch.cuda.is_available() else 'CPU'}"
+)
 ```
 
 ---
@@ -129,15 +214,16 @@ To keep the project organized and prevent conflicts between team members, everyo
 
 ### 🌿 1. Always Create a New Branch
 
-**Never make changes directly on the `main` branch.**
+**Never make changes directly on the `main` or `dev` branch.**
 
-Whenever you want to add a new feature, fix a bug, modify the model, update the UI, or make any other change:
+Before starting a task:
 
-```bash
-git checkout main
-git pull origin main
-git checkout -b feature/your-feature-name
-```
+1. Make sure you are on **`dev`**.
+2. Pull the latest changes.
+3. Open **Source Control**.
+4. Select the current branch.
+5. Choose **Create New Branch**.
+6. Create a branch for your GitHub Issue.
 
 Examples:
 
@@ -163,12 +249,12 @@ Pull Request
    ↓
 Review
    ↓
-Merge
+Merge into dev
 ```
 
 Do not combine unrelated tasks into the same branch.
 
-### 🚫 3. Do Not Push Directly to `main`
+### 🚫 3. Do Not Push Directly to `main` or `dev`
 
 All changes must go through a **Pull Request**.
 
@@ -181,14 +267,16 @@ Code Review
      ↓
 Approved ✅
      ↓
-main
+dev
 ```
+
+After final testing, `dev` can be merged into `main`.
 
 ### 📝 4. Keep Commits Clear
 
 Write meaningful commit messages that explain what changed.
 
-Good:
+**Good:**
 
 ```text
 feat: add skin image preprocessing
@@ -197,7 +285,7 @@ fix: handle invalid image input
 docs: update dataset documentation
 ```
 
-Avoid:
+**Avoid:**
 
 ```text
 update
@@ -266,16 +354,15 @@ Documentation should be written in **English** and should be clear enough for an
 
 ### 🔀 10. Keep Your Branch Updated
 
-Before creating or merging a Pull Request, make sure your branch is synchronized with the latest `main` branch.
+Before creating a Pull Request:
 
-```bash
-git checkout main
-git pull origin main
-git checkout your-branch
-git merge main
-```
-
-Resolve any conflicts before requesting the final review.
+1. Switch to **`dev`** in VS Code.
+2. Pull the latest changes.
+3. Return to your feature branch.
+4. Use the VS Code **Source Control** options to merge/rebase the latest `dev` changes into your branch.
+5. Resolve any conflicts.
+6. Test your changes.
+7. Push the updated branch.
 
 ---
 
@@ -286,7 +373,7 @@ The standard workflow for every task is:
 ```text
 📋 GitHub Issue
       ↓
-🌿 Create Branch
+🌿 Create Branch from dev
       ↓
 💻 Implement Changes
       ↓
@@ -298,9 +385,33 @@ The standard workflow for every task is:
       ↓
 👀 Code Review
       ↓
-✅ Merge
+✅ Merge into dev
+      ↓
+🧪 Integration Testing
+      ↓
+🚀 Merge into main
       ↓
 🧹 Delete Branch
 ```
 
-**Main branch = stable project code.** 🛡️
+### 🌳 Branch Structure
+
+```text
+main
+ │
+ │  Stable project code
+ │
+ └── dev
+      │
+      │  Active development
+      │
+      ├── feature/model-training
+      ├── feature/dataset-preprocessing
+      ├── feature/android-layout
+      ├── feature/camera-integration
+      └── fix/image-validation
+```
+
+**`main` = stable project code.** 🛡️
+
+**`dev` = active development and integration.** 🚧
