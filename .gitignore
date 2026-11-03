@@ -1,2 +1,14 @@
 /dataset
 *.pyc
+/model/*.csv
+/model/*.pth
+/model/*.png
+/model/IIYI
+/model/youtube
+/model/pubmed
+/model/public
+/model/edu
+/model/note
+/model/reddit
+/model/twitter
+/model/validation_data
