@@ -12,3 +12,25 @@
 /model/reddit
 /model/twitter
 /model/validation_data
+
+# Android Studio
+.idea/
+
+# Gradle
+.gradle/
+**/build/
+
+# Kotlin
+.kotlin/
+
+# Local configuration
+local.properties
+
+# OS files
+.DS_Store
+Thumbs.db
+**/.idea/
+**/.gradle/
+**/.kotlin/
+**/build/
+**/local.properties
