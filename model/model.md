@@ -6,11 +6,11 @@ A beginner-friendly guide to the model in [mainmodel.ipynb](mainmodel.ipynb).
 
 The model takes **one skin photograph** and chooses **one of 20 supported disease classes**. This is called *image classification*.
 
-It uses **ResNet18**, a convolutional neural network, or CNN. A CNN learns visual patterns by passing an image through a series of small filters. Its output is a set of scores, one for each class.
+Choose **ResNet18** or **Swin-Tiny** with `model_name` in the notebook. ResNet18 is a convolutional neural network, or CNN. A CNN learns visual patterns by passing an image through a series of small filters. Swin-Tiny is a vision transformer that processes image patches using attention. Both produce one score for each class. Sections 2–7 explain the ResNet18 path; section 8 explains the Swin alternative.
 
 The model receives image pixels. Captions, symptoms, patient history, and disease names are not inputs to the network. It does not draw a boundary around a lesion or locate it with a box.
 
-## 2. The architecture at a glance
+## 2. The ResNet18 architecture at a glance
 
 Read this diagram from top to bottom. Blue sections keep their pretrained weights. The final feature stage and classifier are adapted during training.
 
@@ -24,7 +24,7 @@ flowchart TD
     F["Stage 3: layer3<br/>2 residual blocks<br/>256 feature maps, 14 × 14"]
     G["Stage 4: layer4<br/>2 residual blocks<br/>512 feature maps, 7 × 7"]
     H["Global average pooling + flatten<br/>512 numbers"]
-    I["Dropout: 25%<br/>Active during training only"]
+    I["Dropout: 40%<br/>Active during training only"]
     J["Linear classifier<br/>512 inputs → 20 class scores"]
     K["Prediction<br/>Choose the highest-scoring class"]
     A --> B --> C --> D --> E --> F --> G --> H --> I --> J --> K
@@ -145,7 +145,7 @@ The notebook loads:
 ```python
 model = resnet18(weights=ResNet18_Weights.DEFAULT)
 model.fc = nn.Sequential(
-    nn.Dropout(0.25),
+    nn.Dropout(0.40),
     nn.Linear(model.fc.in_features, 20)
 )
 ```
@@ -156,7 +156,7 @@ The pretrained network originally has a classifier for 1,000 ImageNet categories
 
 The two parts of the replacement classifier are:
 
-- **Dropout, probability 0.25:** randomly sets approximately 25% of the incoming feature values to zero during training and rescales the remaining values. It encourages the classifier to avoid relying on just a few features. All features are available during evaluation and prediction.
+- **Dropout, probability 0.40:** randomly sets approximately 40% of the incoming feature values to zero during training and rescales the remaining values. It encourages the classifier to avoid relying on just a few features. All features are available during evaluation and prediction. Change `dropout_rate` to configure it.
 - **Linear layer, 512 → 20:** learns how to combine the 512 features into the 20 class scores. It has 10,260 trainable parameters: `512 × 20` weights plus 20 biases.
 
 The output positions map to `class_names`, which the notebook sorts alphabetically. This class order is saved with the model and must be preserved when loading it.
@@ -177,7 +177,7 @@ Here, `warmup_epochs = 2` means two epochs of classifier-only training. It does 
 
 ### Continuing a saved run
 
-Set `resume_training = True` and keep the original `run_name` to continue from that run's **best saved checkpoint**. This can be earlier than its last completed epoch. Keep the same model settings and data split, then restart the kernel and run the notebook from the beginning. `number_of_epochs` is the total target, not the number of additional epochs.
+Set `resume_training = True` and keep the original `run_name` to continue from that run's **best saved checkpoint**. This can be earlier than its last completed epoch. Keep the same architecture, sampling mode, model settings, and data split, then restart the kernel and run the notebook from the beginning. `number_of_epochs` is the total target, not the number of additional epochs. Older checkpoints without architecture or sampling metadata are treated as ResNet18 with balanced sampling disabled.
 
 Before continuing, the notebook backs up the existing checkpoint and history. The active history keeps the entries up to the saved epoch and then records the new continuation. The best checkpoint is replaced only when validation macro F1 improves.
 
@@ -197,7 +197,11 @@ One **epoch** is one pass through that epoch's training images. A **learning rat
 
 ### The loss: measuring the training error
 
-The notebook uses **weighted cross-entropy loss**. It penalizes assigning a low score to the correct class relative to the other classes. Training passes the raw scores directly to cross-entropy; a separate softmax layer is not needed before this loss.
+Cross-entropy penalizes assigning a low score to the correct class relative to the other classes. Training passes the raw scores directly to cross-entropy; a separate softmax layer is not needed before this loss.
+
+By default, `balanced_sampling = True`. Each image is given a sampling weight of `1 / number of images in its class`. The notebook draws with replacement, so all classes have equal expected exposure, while actual counts fluctuate. All training images remain available; an individual epoch can repeat some images and omit others. The loss is **unweighted cross-entropy**, so balancing is not also applied through loss weights. Validation images are neither oversampled nor reweighted.
+
+With `balanced_sampling = False`, the notebook restores the earlier approach: shuffled training images and **weighted cross-entropy loss**. In that mode, the following calculation supplies the loss weights.
 
 Less frequent classes receive larger weights. For each class, the notebook calculates:
 
@@ -212,7 +216,7 @@ This changes how strongly each class contributes to the training loss. It does n
 
 **AdamW** uses running estimates of gradients and their squared values to adjust parameter updates. **Weight decay**, set to `0.001`, also shrinks the parameters included in the optimizer. Together with dropout, it provides regularization intended to reduce overfitting.
 
-The optimizer choices above describe the current implementation. SGD, Swin, ViT, and BERT are not part of this model.
+Both supported architectures use AdamW. SGD and a separate language model such as BERT are not used in these image-classification experiments.
 
 ### Learning-rate scheduling and stopping
 
@@ -254,7 +258,36 @@ Highest-scoring class, or the top five classes
 
 The model must choose among its 20 known classes. There is no “unknown disease” output or built-in rejection threshold. A high softmax value is a relative preference among these classes, not a medically verified probability or proof that the photograph belongs to a supported class.
 
-## 8. A small glossary
+## 8. The Swin-Tiny alternative
+
+Set `model_name = "swin_t"` and leave `balanced_sampling = True` to prepare the second experiment. The default name becomes `swin_t_balanced_run_1`, keeping its model and reports separate from `resnet18_balanced_run_1`. Restart the kernel and run from the beginning when switching models.
+
+Swin-Tiny begins with ImageNet-pretrained weights. It divides the image into patches and learns relationships between patches through **attention** within small windows. Alternating blocks shift these windows so information can move across window boundaries. Patch merging makes the spatial representation smaller while increasing the number of channels.
+
+```mermaid
+flowchart TD
+    A["RGB image<br/>224 × 224 pixels"]
+    B["Patch embedding: 4 × 4 patches<br/>56 × 56 positions, 96 channels"]
+    C["Transformer stage 1: 2 blocks<br/>56 × 56 positions, 96 channels"]
+    D["Patch merging + stage 2: 2 blocks<br/>28 × 28 positions, 192 channels"]
+    E["Patch merging + stage 3: 6 blocks<br/>14 × 14 positions, 384 channels"]
+    F["Patch merging + stage 4: 2 blocks<br/>7 × 7 positions, 768 channels"]
+    G["Final LayerNorm + average pooling<br/>768 numbers"]
+    H["Dropout 40% + linear classifier<br/>768 inputs → 20 class scores"]
+    A --> B --> C --> D --> E --> F --> G --> H
+```
+
+In text: **image → patches → four transformer stages → pooled features → classifier**.
+
+The classifier trains alone for the first two epochs. From epoch 3, the final transformer stage and final LayerNorm also learn. Earlier stages remain frozen and in evaluation mode, which disables stochastic depth in those frozen stages. The classifier uses the same dropout setting as ResNet18. LayerNorm normalizes features without BatchNorm's running statistics.
+
+The initial classifier learning rate is `0.001`; fine-tuning starts at `0.0001` for the final stage and LayerNorm and `0.0003` for the classifier. These are exposed as `warmup_learning_rate`, `backbone_learning_rate`, and `head_learning_rate` for both architectures. They are starting experiment settings, not established optimal values for Swin.
+
+Both models use the same padding, input size, augmentation, normalization, and saved validation split for this comparison. This shared image preparation is an experiment choice; it differs from Swin's published resize-and-center-crop inference preset. The official architecture and pretrained preset are documented in [Torchvision's Swin-Tiny reference](https://docs.pytorch.org/vision/main/models/generated/torchvision.models.swin_t.html).
+
+`split_reference_run` selects the previous run's saved training and validation manifests. The notebook verifies their filenames, labels, groups, and image hashes against the cleaned data before using them. Evaluation exports an additional `<run_name>_summary.csv` with the model choice, sampling mode, best epoch, and validation metrics.
+
+## 9. A small glossary
 
 | Term | Simple meaning |
 |---|---|
